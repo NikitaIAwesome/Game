@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приключения Джони Бонасера </title>
+    <style>
+        .text {
+            width: 10%;
+            padding: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        .enemy-image {
+            white-space: pre;
+            font-family: monospace;
+            line-height: 1;
+        }
+        #inventory {
+            border: 10px solid #faf741;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: rgba(0, 255, 255, 0.062);
+        }
+    </style>
+</head>
+<body>
+    <div id="MenuBtn">
+        <button onclick="goOnAdventure()">Поход🧗</button>
+        <button onclick="openInventory()">Инвентарь👜</button>
+        <button onclick="openMap()">Карта🗺️</button>
+        <button onclick="ironsmith()">Кузнец⚒️</button>
+    </div>
+    <div id="MenuBtn2" class="hidden">
+        <button onclick="SHOP()">Магазин🏪</button>
+        <button onclick="openInventory()">Инвентарь👜</button>
+        <button onclick="openMap()">Карта🗺️</button>
+        <button onclick="BAR()">Бар🍻</button>
+    </div>
+    <div id="HACK">
+        <button onclick="HACKER()">ЧИТЫ :></button>
+    </div>
+    
+    <p id="result">Случайное число: <span id="number"></span></p>
+    <p id="result">Я чувствую себя на: <span id="Hphero"></span></p>
+    <p id="result">Мои денежки: <span id="moneyhero"></span></p>
+    <p class="text"></p>
+    <p class="textIronSmith"></p>
+    
+    <div id="inventory" class="hidden">
+        <h3>Инвентарь</h3>
+        <ul id="inventory-items"></ul>
+    </div>
+
+    <div id="ironsmithButtons" class="hidden">
+        <button onclick="improveSword()">Улучшить меч🆙</button>
+        <button onclick="improveArmor()">Улучшить броню🆙</button>
+        <button onclick="chat()">Поболтать💬</button>
+    </div>
+    <div id="ShopBtn" class="hidden">
+        <button onclick="buyelexir()">Купить зелье здоровья🍹</button>
+        <button onclick="buyring()">Купить кольцо(+5 к защите)💍</button>
+        <button onclick="chatshop()">Поболтать💬</button>
+    </div>
+    <div id="Barbtn" class="hidden">
+        <button onclick="game100()">Сыграть на 100 монет</button>
+    </div>
+    
+    <div id="AdventureButtons" class="hidden">
+        <button onclick="up()">Идти вперед👣</button>
+        <button onclick="left()">Идти налево👣</button>
+        <button onclick="right()">Идти направо👣</button>
+    </div>
+    <div id="MapButtons" class="hidden">
+            <button onclick="enterForest()">Идти в лес!</button>
+            <button onclick="enterTown()">Идти в город!</button>
+            <button onclick="enterBridge()">Идти на мост!</button>
+    </div>
+    
+    <div id="fight" class="hidden">
+        <div id="enemy-info"></div>
+        <button onclick="attack()">Атака👊!</button>
+        <button onclick="tryEscape()">Побег🏃</button>
+    </div>
+
+    <script src="js.js"></script>
+</body>
+</html>
